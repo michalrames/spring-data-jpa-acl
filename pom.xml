@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mediaiqdigital</groupId>
-	<artifactId>spring-acl-jpa</artifactId>
+	<groupId>io.github.mediaiq</groupId>
+	<artifactId>spring-data-jpa-acl</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>spring-acl-jpa</name>
+	<name>spring-data-jpa-acl</name>
 	<description>Integration for Spring ACL with Spring Data JPA</description>
 
 	<parent>
@@ -104,7 +104,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

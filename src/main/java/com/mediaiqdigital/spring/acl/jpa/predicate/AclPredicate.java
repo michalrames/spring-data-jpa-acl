@@ -105,7 +105,6 @@ public abstract class AclPredicate<T, Q extends EntityPathBase<T>> {
 		 * aclEntry.granting = 'true' and aclEntry.sid in (select aclSid from
 		 * AclSid aclSid where aclSid.sid in (:sids))) > 0)
 		 */
-		// QCustomer someObject = QCustomer.customer;
 		return getObjectId().in(
 				selectWhereSomeObjectHasAnAclEntry(getObjectId(), sids));
 	}
