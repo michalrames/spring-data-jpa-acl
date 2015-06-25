@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Immutable;
 
 @Entity(name = "AclClass")
-@Table(name = "acl_class", schema = "acl")
+@Table(name = "acl_class")
 @Immutable
 public class AclClass implements Serializable {
 

@@ -21,7 +21,7 @@ import org.hibernate.annotations.Immutable;
 
 @Entity(name = "AclObjectIdentity")
 @Table(name = "acl_object_identity", uniqueConstraints = @UniqueConstraint(name = "uk_acl_object_identity", columnNames = {
-		"object_id_class", "object_id_identity" }), schema = "acl")
+		"object_id_class", "object_id_identity" }))
 @Immutable
 public class AclObjectIdentity implements Serializable {
 

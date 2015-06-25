@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Immutable;
 
 @Entity(name = "AclEntry")
-@Table(name = "acl_entry", schema = "acl")
+@Table(name = "acl_entry")
 @Immutable
 public class AclEntry implements Serializable {
 
