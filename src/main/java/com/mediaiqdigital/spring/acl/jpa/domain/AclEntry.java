@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.ForeignKey;
 
 import org.hibernate.annotations.Immutable;
 
@@ -42,11 +43,11 @@ public class AclEntry implements Serializable {
 	private Boolean auditFailure;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "acl_object_identity", referencedColumnName = "id", nullable = false, unique = false, insertable = true, updatable = true)
+	@JoinColumn(foreignKey = @ForeignKey(name = "fk_acl_entry_object"), name = "acl_object_identity", referencedColumnName = "id", nullable = false, unique = false, insertable = true, updatable = true)
 	private AclObjectIdentity aclObjectIdentity;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "sid", referencedColumnName = "id", nullable = false, unique = false, insertable = true, updatable = true)
+	@JoinColumn(foreignKey = @ForeignKey(name = "fk_acl_entry_acl"), name = "sid", referencedColumnName = "id", nullable = false, unique = false, insertable = true, updatable = true)
 	private AclSid sid;
 
 	public AclEntry() {
